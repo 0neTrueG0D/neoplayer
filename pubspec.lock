@@ -152,6 +152,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  tailwind_standards:
+    dependency: "direct main"
+    description:
+      name: tailwind_standards
+      sha256: "6e3d7bd5834a4337b4f4cc63ec2e5e35a20e0d1cd226cb25e61b1f69a2402a24"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   term_glyph:
     dependency: transitive
     description:
@@ -186,3 +194,4 @@ packages:
     version: "0.1.4-beta"
 sdks:
   dart: ">=3.1.0 <4.0.0"
+  flutter: ">=1.17.0"
