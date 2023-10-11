@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:neoplayer/pages/home.dart';
+import 'package:neoplayer/pages/playlist.dart';
+import 'package:neoplayer/pages/song.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +14,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false, // Remove the debug banner
-      home: Home()
+      title: 'Neoplayer',
+      theme: ThemeData(
+          primarySwatch: Colors.blue,
+          textTheme: Theme.of(context).textTheme.apply(
+                bodyColor: Colors.white,
+                displayColor: Colors.white,
+              )),
+      home: const Home(),
+      getPages: [
+        GetPage(name: '/', page: () => const Home()),
+        GetPage(name: '/song', page: () => const Song()),
+        GetPage(name: '/playlists', page: () => const Playlist()),
+      ],
     );
   }
 }
